@@ -15,13 +15,13 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 # Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
 # Internal/Organization: Download from internal location (internet sources are unreliable)
-$url        = '' # download url, HTTPS preferred
-$url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'https://download2.terra-master.com/TerraMaster_TNAS_for_win_V3.2.0.6.zip' # download url, HTTPS preferred
+$url64      = 'https://download2.terra-master.com/TerraMaster_TNAS_for_win_V3.2.0.6.zip' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'MSI' #only one of these: exe, msi, msu
   url           = $url
   url64bit      = $url64
   #file         = $fileLocation
@@ -32,10 +32,8 @@ $packageArgs = @{
   # To determine checksums, you can get that from the original site if provided.
   # You can also use checksum.exe (choco install checksum) and use it
   # e.g. checksum -t sha256 -f path\to\file
-  checksum      = ''
-  checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-  checksum64    = ''
-  checksumType64= 'sha256' #default is checksumType
+  checksum      = 'c9dad3e6ee795a30ebb15589ba19c83e'
+  checksumType  = 'md5' #default is md5, can also be sha1, sha256 or sha512
 
   # MSI
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
