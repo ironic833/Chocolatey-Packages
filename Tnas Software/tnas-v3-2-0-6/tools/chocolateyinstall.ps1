@@ -8,7 +8,7 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'MSI' #only one of these: exe, msi, msu
   url           = $url
-  file          = "$toolsDir\TNASPCSetup_v3.2.0.6.zip"
+  file          = "$toolsDir\TNASPCSetup.msi"
   #file         = $fileLocation
 
   softwareName  = 'tnas-v3-2-0-6*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
@@ -25,6 +25,6 @@ $packageArgs = @{
 
 
 
- 
-Get-ChocolateyUnzip @packageArgs
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\TNASPCSetup_v3.2.0.6.zip" -Destination $toolsDir
+Install-ChocolateyInstallPackage @packageArgs
 Remove-Item -Path $packageArgs.file
