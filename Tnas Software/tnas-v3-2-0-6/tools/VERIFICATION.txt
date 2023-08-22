@@ -1,13 +1,8 @@
-﻿
-Note: Include this file if including binaries you have the right to distribute.
-Otherwise delete. this file. If you are the software author, you can mention
-this.
-
-===DELETE ABOVE THIS LINE AND THIS LINE===
-
-VERIFICATION
+﻿VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-<Include details of how to verify checksum contents>
-<If software vendor, explain that here>
+All rights and copyright go to TerraMaster for this software
+
+Installer MD5 checksum is c9dad3e6ee795a30ebb15589ba19c83e as shown on the download
+page for this software on their offical site.
