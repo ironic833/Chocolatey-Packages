@@ -8,11 +8,11 @@
     <authors>Terramaster</authors>
     <projectUrl>https://github.com/ironic833/Chocolatey-Packages</projectUrl>
     <iconUrl>https://img.terra-master.com/skin/frontend/base/default/images/Terramaster_logo.svg</iconUrl>
-    <copyright>2023</copyright>
+    <copyright>Copyright ©2017 TerraMaster</copyright>
     <licenseUrl>https://help.terra-master.com/TOS/view/?lang/en-us/flag/Terms_and_conditions</licenseUrl> 
     <projectSourceUrl>https://support.terra-master.com/download/packages?product=F2-210</projectSourceUrl>
     <docsUrl>https://download2.terra-master.com/TerraMaster_User_Manual_for_F2-210_en.zip</docsUrl>
-  
+    <packageSourceUrl>https://github.com/ironic833/Chocolatey-Packages</packageSourceUrl>
     <tags>tnas-v3-2-0-6 terramaster Terramaster TNAS tnas F2-210</tags>
     <summary>Installer for TNAS 3.2.0.6 for the F2-210</summary>
     <description>The installer for tnas for the f2-210</description>
