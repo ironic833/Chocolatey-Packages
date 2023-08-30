@@ -18,5 +18,11 @@ $packageArgs = @{
 }
 
 Get-ChocolateyUnzip -FileFullPath "$toolsDir\TNASPCSetup_v3.2.0.6.zip" -Destination $toolsDir
+
+$checkSumReturn = Get-ChecksumValid `-File $file -Checksum $checksum -ChecksumType $checksumType
+
+Write-Host "Checksum: $checkSumReturn" >> check.txt
+
 Install-ChocolateyInstallPackage @packageArgs
+
 Remove-Item -Path $packageArgs.file
