@@ -26,22 +26,22 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>__REPLACE__</version>
+    <version>2.0.21256.3</version>
     <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <owners>Oisin Hickey</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>Xbox360SDK (Install)</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <authors>Microsoft Corporation</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/xbox360sdk.png</iconUrl>-->
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <iconUrl>https://i.pinimg.com/736x/bf/21/de/bf21deeef128ed67160f9fddd520036b.jpg</iconUrl>
+    <copyright>Copyright (c) Microsoft Corporation. All rights reserved.</copyright> 
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
@@ -52,7 +52,86 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>xbox360sdk SPACE_SEPARATED</tags>
     <summary>__REPLACE__</summary>
     <description>__REPLACE__MarkDown_Okay </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>This reference will guide you through the process of setting up your 
+   Xbox 360 development kit.  First, follow these steps to connect your 
+   console: 
+
+   1. Connect the AV pack that matches the input of your TV or monitor to 
+   the AV output on the back of the console.
+
+   2. Connect the video cable to the video input of your TV.
+
+   3. Connect the Xbox 360 controller to the console through the front 
+   USB port of the console.
+
+   4. Use a standard Ethernet cable (not provided) and connect one end to
+   the Ethernet port on the back of the console. Connect the other end to
+   your network. 
+
+   5.  Connect your PC to the USB emulation port:
+     
+    1. Connect the USB cable (provided) to the USB port on console labeled "DVD EMU".
+    2. Connect the other end of the USB cable to the development PC.
+
+   6.  Connect power to the console: The Xbox 360 development console ships with 
+   both 100v-110v and 220v power supply units (PSU).  If you use a 
+   converter with the PSU, you must use a CE-Marked 110v-220v 750VA 
+   step-down converter 
+
+    1. Connect the power supply to the console.
+    2. Connect the power cord to the power supply.
+    3. Connect the power cord to the power outlet.
+
+   Once fully connected, the console is ready for power.  Turn on your 
+   display, then press the power button to the left of the USB ports on 
+   the front panel of the console.  This will launch the console's boot 
+   sequence, during which time the TV will display an invalid video 
+   signal.  When the console has finished the boot sequence, a valid video 
+   signal will be sent to the TV and the Xbox 360 Launcher will be displayed.  
+
+   Note: If the console has completed its boot sequence, but a valid 
+   video signal still isn't being received, it may be necessary to reset the
+   video mode. You may use one of the following shortcut button
+   combinations on the controller to quickly set video mode:
+
+     o For NTSC-M, left trigger+right trigger+D-pad right*
+     o For NTSC-J, left trigger+right trigger+D-pad left
+     o For PAL-50, left trigger+right trigger+D-pad up**
+     o For VGA, left trigger+right trigger+D-pad down
+
+   * PAL-I 60 Hz (Europe)
+   ** Not supported in the current release
+
+   Note: The flicker filter is not enabled. As a result, images will
+   flicker on NTSC displays. The flicker will not show up when outputting
+   to HDTV or VGA. The flicker filter will be enabled in a future
+   release.
+
+   The first time the console boots, the Xbox 360 Launcher will request that
+   you enter a name for your console. Using the controller, enter a name
+   and then select OK to continue. The Xbox 360 Launcher will display a list
+   of the available applications on the console.
+
+   To turn off power to the console, simply press the power button.
+
+
+   Important information about the console hardware
+
+     * Make sure that you use only the power supply that comes with the
+       development console.
+
+     * Always plug the power supply into the development console before
+       plugging the power supply into the outlet.
+
+     * Console hardware is sensitive to static electricity; therefore it
+       is recommended that any static electricity be dissipated before
+       plugging in a controller. For example, walking across a carpet and
+       plugging in a controller without first touching a grounding
+       surface may reset the console.
+
+
+   Copyright (c) Microsoft Corporation. All rights reserved.
+</releaseNotes>
     <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
