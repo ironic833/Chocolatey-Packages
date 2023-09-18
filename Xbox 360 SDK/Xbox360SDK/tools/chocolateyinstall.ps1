@@ -15,7 +15,7 @@ $fileLocation = Join-Path $toolsDir 'XBOX360_SDK_21256.3.exe'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 # Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
 # Internal/Organization: Download from internal location (internet sources are unreliable)
-# $url        = '' # download url, HTTPS preferred
+$url        = 'http://download2390.mediafire.com/7ys5fobaltdgM3I9bRAkchdfKvVvKuXzJwePJvTMsABahjxUA2dzulEWlKt-stkWuP-9N80oIr4jYbw9tMYqnrRLKPpRQY0VrwBZWbD96WXPkmoJ43-W7WI0xZwioGhcDKRQwTVhg45jtO6cetGpDmbnbfBjNwcUdwI06XzGvuSNtg/oo761qxqbd6rczo/XBOX360+SDK+21256.8.exe' # download url, HTTPS preferred
 # $url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
 
 $packageArgs = @{
