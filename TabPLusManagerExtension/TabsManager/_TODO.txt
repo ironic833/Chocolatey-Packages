@@ -1,0 +1,3 @@
+﻿TODO
+
+https://community.spiceworks.com/how_to/194087-how-to-install-a-chrome-extension-using-a-powershell-script
