@@ -1,29 +1,14 @@
-﻿# IMPORTANT: Before releasing this package, copy/paste the next 2 lines into PowerShell to remove all comments from this file:
-#   $f='c:\path\to\thisFile.ps1'
-#   gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
-
-# 1. See the _TODO.md that is generated top level and read through that
-# 2. Follow the documentation below to learn how to create a package for the package type you are creating.
-# 3. In Chocolatey scripts, ALWAYS use absolute paths - $toolsDir gets you to the package's tools directory.
-$ErrorActionPreference = 'Stop' # stop on all errors
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# Internal packages (organizations) or software that has redistribution rights (community repo)
-# - Use `Install-ChocolateyInstallPackage` instead of `Install-ChocolateyPackage`
-#   and put the binaries directly into the tools folder (we call it embedding)
 $fileLocation = Join-Path $toolsDir 'XBOX360_SDK_21256.3.exe'
-# If embedding binaries increase total nupkg size to over 1GB, use share location or download from urls
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
-# Community Repo: Use official urls for non-redist binaries or redist where total package size is over 200MB
-# Internal/Organization: Download from internal location (internet sources are unreliable)
-$url        = 'http://download2390.mediafire.com/7ys5fobaltdgM3I9bRAkchdfKvVvKuXzJwePJvTMsABahjxUA2dzulEWlKt-stkWuP-9N80oIr4jYbw9tMYqnrRLKPpRQY0VrwBZWbD96WXPkmoJ43-W7WI0xZwioGhcDKRQwTVhg45jtO6cetGpDmbnbfBjNwcUdwI06XzGvuSNtg/oo761qxqbd6rczo/XBOX360+SDK+21256.8.exe' # download url, HTTPS preferred
-# $url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
+$url        = 'http://download2390.mediafire.com/7ys5fobaltdgM3I9bRAkchdfKvVvKuXzJwePJvTMsABahjxUA2dzulEWlKt-stkWuP-9N80oIr4jYbw9tMYqnrRLKPpRQY0VrwBZWbD96WXPkmoJ43-W7WI0xZwioGhcDKRQwTVhg45jtO6cetGpDmbnbfBjNwcUdwI06XzGvuSNtg/oo761qxqbd6rczo/XBOX360+SDK+21256.8.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'EXE' #only one of these: exe, msi, msu
-  # url           = $url
-  # url64bit      = $url64
+  url           = $url
   file         = $fileLocation
 
   softwareName  = 'Xbox360SDK*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique

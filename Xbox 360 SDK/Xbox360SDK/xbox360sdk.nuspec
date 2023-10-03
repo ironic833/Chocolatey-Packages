@@ -1,156 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Read this before creating packages: https://docs.chocolatey.org/en-us/create/create-packages -->
-<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://community.chocolatey.org/packages). -->
-
-<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
-
-<!--
-This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
-
-* the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
--->
-
-<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
-<!-- * If you are an organization making private packages, you probably have no issues here -->
-<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
-    <!-- This section is about this package, although id and version have ties back to the software -->
-    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
-    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
     <id>xbox360sdk</id>
-    <!-- version should MATCH as closely as possible with the underlying software -->
-    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
-    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>2.0.21256.3</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>Oisin Hickey</owners>
-    <!-- ============================== -->
-
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
     <title>Xbox360SDK (Install)</title>
     <authors>Microsoft Corporation</authors>
-    <!-- projectUrl is required for the community feed -->
     <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
-    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
-    <!-- Here is an example using Githack -->
     <iconUrl>https://i.pinimg.com/736x/bf/21/de/bf21deeef128ed67160f9fddd520036b.jpg</iconUrl>
     <copyright>Copyright (c) Microsoft Corporation. All rights reserved.</copyright> 
-    <!-- If there is a license Url available, it is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
-    <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>xbox360sdk SPACE_SEPARATED</tags>
-    <summary>__REPLACE__</summary>
+    <summary>A Choco package and installer for the Xbox 360 SDK</summary>
     <description>__REPLACE__MarkDown_Okay </description>
     <releaseNotes>This reference will guide you through the process of setting up your 
-   Xbox 360 development kit.  First, follow these steps to connect your 
-   console: 
+                  Xbox 360 development kit.  First, follow these steps to connect your 
+                  console: 
 
-   1. Connect the AV pack that matches the input of your TV or monitor to 
-   the AV output on the back of the console.
+                  1. Connect the AV pack that matches the input of your TV or monitor to 
+                  the AV output on the back of the console.
 
-   2. Connect the video cable to the video input of your TV.
+                  2. Connect the video cable to the video input of your TV.
 
-   3. Connect the Xbox 360 controller to the console through the front 
-   USB port of the console.
+                  3. Connect the Xbox 360 controller to the console through the front 
+                  USB port of the console.
 
-   4. Use a standard Ethernet cable (not provided) and connect one end to
-   the Ethernet port on the back of the console. Connect the other end to
-   your network. 
+                  4. Use a standard Ethernet cable (not provided) and connect one end to
+                  the Ethernet port on the back of the console. Connect the other end to
+                  your network. 
 
-   5.  Connect your PC to the USB emulation port:
-     
-    1. Connect the USB cable (provided) to the USB port on console labeled "DVD EMU".
-    2. Connect the other end of the USB cable to the development PC.
+                  5.  Connect your PC to the USB emulation port:
+                    
+                    1. Connect the USB cable (provided) to the USB port on console labeled "DVD EMU".
+                    2. Connect the other end of the USB cable to the development PC.
 
-   6.  Connect power to the console: The Xbox 360 development console ships with 
-   both 100v-110v and 220v power supply units (PSU).  If you use a 
-   converter with the PSU, you must use a CE-Marked 110v-220v 750VA 
-   step-down converter 
+                  6.  Connect power to the console: The Xbox 360 development console ships with 
+                  both 100v-110v and 220v power supply units (PSU).  If you use a 
+                  converter with the PSU, you must use a CE-Marked 110v-220v 750VA 
+                  step-down converter 
 
-    1. Connect the power supply to the console.
-    2. Connect the power cord to the power supply.
-    3. Connect the power cord to the power outlet.
+                    1. Connect the power supply to the console.
+                    2. Connect the power cord to the power supply.
+                    3. Connect the power cord to the power outlet.
 
-   Once fully connected, the console is ready for power.  Turn on your 
-   display, then press the power button to the left of the USB ports on 
-   the front panel of the console.  This will launch the console's boot 
-   sequence, during which time the TV will display an invalid video 
-   signal.  When the console has finished the boot sequence, a valid video 
-   signal will be sent to the TV and the Xbox 360 Launcher will be displayed.  
+                  Once fully connected, the console is ready for power.  Turn on your 
+                  display, then press the power button to the left of the USB ports on 
+                  the front panel of the console.  This will launch the console's boot 
+                  sequence, during which time the TV will display an invalid video 
+                  signal.  When the console has finished the boot sequence, a valid video 
+                  signal will be sent to the TV and the Xbox 360 Launcher will be displayed.  
 
-   Note: If the console has completed its boot sequence, but a valid 
-   video signal still isn't being received, it may be necessary to reset the
-   video mode. You may use one of the following shortcut button
-   combinations on the controller to quickly set video mode:
+                  Note: If the console has completed its boot sequence, but a valid 
+                  video signal still isn't being received, it may be necessary to reset the
+                  video mode. You may use one of the following shortcut button
+                  combinations on the controller to quickly set video mode:
 
-     o For NTSC-M, left trigger+right trigger+D-pad right*
-     o For NTSC-J, left trigger+right trigger+D-pad left
-     o For PAL-50, left trigger+right trigger+D-pad up**
-     o For VGA, left trigger+right trigger+D-pad down
+                    o For NTSC-M, left trigger+right trigger+D-pad right*
+                    o For NTSC-J, left trigger+right trigger+D-pad left
+                    o For PAL-50, left trigger+right trigger+D-pad up**
+                    o For VGA, left trigger+right trigger+D-pad down
 
-   * PAL-I 60 Hz (Europe)
-   ** Not supported in the current release
+                  * PAL-I 60 Hz (Europe)
+                  ** Not supported in the current release
 
-   Note: The flicker filter is not enabled. As a result, images will
-   flicker on NTSC displays. The flicker will not show up when outputting
-   to HDTV or VGA. The flicker filter will be enabled in a future
-   release.
+                  Note: The flicker filter is not enabled. As a result, images will
+                  flicker on NTSC displays. The flicker will not show up when outputting
+                  to HDTV or VGA. The flicker filter will be enabled in a future
+                  release.
 
-   The first time the console boots, the Xbox 360 Launcher will request that
-   you enter a name for your console. Using the controller, enter a name
-   and then select OK to continue. The Xbox 360 Launcher will display a list
-   of the available applications on the console.
+                  The first time the console boots, the Xbox 360 Launcher will request that
+                  you enter a name for your console. Using the controller, enter a name
+                  and then select OK to continue. The Xbox 360 Launcher will display a list
+                  of the available applications on the console.
 
-   To turn off power to the console, simply press the power button.
-
-
-   Important information about the console hardware
-
-     * Make sure that you use only the power supply that comes with the
-       development console.
-
-     * Always plug the power supply into the development console before
-       plugging the power supply into the outlet.
-
-     * Console hardware is sensitive to static electricity; therefore it
-       is recommended that any static electricity be dissipated before
-       plugging in a controller. For example, walking across a carpet and
-       plugging in a controller without first touching a grounding
-       surface may reset the console.
+                  To turn off power to the console, simply press the power button.
 
 
-   Copyright (c) Microsoft Corporation. All rights reserved.
+                  Important information about the console hardware
+
+                    * Make sure that you use only the power supply that comes with the
+                      development console.
+
+                    * Always plug the power supply into the development console before
+                      plugging the power supply into the outlet.
+
+                    * Console hardware is sensitive to static electricity; therefore it
+                      is recommended that any static electricity be dissipated before
+                      plugging in a controller. For example, walking across a carpet and
+                      plugging in a controller without first touching a grounding
+                      surface may reset the console.
+
+
+                  Copyright (c) Microsoft Corporation. All rights reserved.
 </releaseNotes>
-    <!-- =============================== -->
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
-    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
   </files>
 </package>
