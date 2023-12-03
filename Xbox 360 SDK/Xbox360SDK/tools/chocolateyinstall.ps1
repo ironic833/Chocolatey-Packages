@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $fileLocation = Join-Path $toolsDir 'XBOX360_SDK_21256.3.exe'
-#$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 $url        = 'http://download2390.mediafire.com/7ys5fobaltdgM3I9bRAkchdfKvVvKuXzJwePJvTMsABahjxUA2dzulEWlKt-stkWuP-9N80oIr4jYbw9tMYqnrRLKPpRQY0VrwBZWbD96WXPkmoJ43-W7WI0xZwioGhcDKRQwTVhg45jtO6cetGpDmbnbfBjNwcUdwI06XzGvuSNtg/oo761qxqbd6rczo/XBOX360+SDK+21256.8.exe'
 
 $packageArgs = @{
@@ -10,7 +9,6 @@ $packageArgs = @{
   fileType      = 'EXE' #only one of these: exe, msi, msu
   url           = $url
   file         = $fileLocation
-
   softwareName  = 'Xbox360SDK*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
 
   # Checksums are required for packages which will be hosted on the Chocolatey Community Repository.
