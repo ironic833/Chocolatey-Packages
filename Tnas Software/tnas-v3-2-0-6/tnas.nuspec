@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>tnas</id>
+    <id>TnasPC</id>
     <version>3.2.0.6</version>
     <owners>Oisin Hickey</owners>
-    <title>tnas</title>
+    <title>TnasPC</title>
     <authors>Terramaster</authors>
     <projectUrl>https://github.com/ironic833/Chocolatey-Packages</projectUrl>
     <iconUrl>https://img.terra-master.com/skin/frontend/base/default/images/Terramaster_logo.svg</iconUrl>
