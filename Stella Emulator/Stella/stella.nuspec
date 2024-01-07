@@ -5,7 +5,7 @@
     <version>6.7</version>
     <packageSourceUrl>https://github.com/ironic833/Chocolatey-Packages/tree/main/Stella%20Emulator/Stella</packageSourceUrl>
     <owners>Oisin Hickey</owners>
-    <title>Stella (Install)</title>
+    <title>Stella Emulator</title>
     <authors>Stephen Anthony</authors>
     <projectUrl>https://stella-emu.github.io/</projectUrl>
     <iconUrl>https://stella-emu.github.io/menu-title.gif</iconUrl>
